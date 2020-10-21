@@ -38,7 +38,7 @@ input, button {
     border: 1px solid #777777
 }
 
-.main-div button, .login_div button {
+.main_div button, .login_div button {
     background: #25283d;
     color: #b8d8d8;
     border: 1px solid #25283d;

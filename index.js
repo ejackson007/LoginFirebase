@@ -6,7 +6,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       var user = firebase.auth().currentUser;
       if(user != null){
         var email_id = user.email;
-        document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
+        document.getElementById("user_para").innerHTML = "Welcome User: " + email_id;
       }
     } 
     else {
@@ -22,14 +22,14 @@ function login(){
     var passwd = document.getElementById("user_passwd").value;
 
     firebase.auth().signInWithEmailAndPassword(email, passwd).catch(function (error){
-        //Handle Errors
-        var errorCode = error.code;
-        var errorMessage = error.message;
-
-        window.alert(errorMessage);
+        window.alert("Invalid email or password!");
+        document.getElementById("user_email").value = "";
+        document.getElementById("user_passwd").value = "";
     });
 }
 
 function logout() {
   firebase.auth().signOut();
+  document.getElementById("user_email").value = "";
+  document.getElementById("user_passwd").value = "";
 }

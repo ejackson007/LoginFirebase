@@ -1,23 +1,33 @@
 body {
-    background: #fff;
+    background-image: linear-gradient(#ffa3a5, #8377d1);
     padding: 0px;
     margin: 0px;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Notserrat', sans-serif;
     font-size: 16px;
 }
 
 input, button {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
-/* This is causing the issue for no showing!!! */
 .main_div, .logged_div {
     width: 20%;
     margin: 0px auto;
     margin-top: 150px;
     padding: 20px;
-    /*display: none;*/
+    color: #25283d;
+}
+
+.logged_div {
+    display: none;
+}
+
+.logged_div p {
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    background: #fff;
+    padding: 15px;
 }
 
 .main_div input {
@@ -38,7 +48,7 @@ input, button {
     border: 1px solid #777777
 }
 
-.main_div button, .login_div button {
+.main_div button, .logged_div button {
     background: #25283d;
     color: #b8d8d8;
     border: 1px solid #25283d;
